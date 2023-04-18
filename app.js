@@ -21,6 +21,7 @@ app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'views'));
 
 app.use(express.static('public'));
+app.use('/products/assets',express.static('product-data'));
 app.use(express.urlencoded({extended:false})); // 구성이 있는 함수 객체를 전달할 수 있음, form에서 보낸걸 req.body~형태로 받을 수 있게해줌.
 
 const sessionConfig = createSessionConfig();
