@@ -1,19 +1,19 @@
 const expressSession = require('express-session');
 const mongoDbStore = require('connect-mongodb-session');
 
-const createSessionStore = () => { // 세션 저장소 생성
- const MongoDbStore = mongoDbStore(expressSession); 
+function createSessionStore() {
+  const MongoDBStore = mongoDbStore(expressSession);
 
-const store =  new MongoDbStore({ // 세션 설정
-  uri: 'mongodb://localhost:27017',
-  databaseName: 'online-shop', // database.js에서아 동일한 이름이어야 함
-  collection: 'sessions'
- });
+  const store = new MongoDBStore({
+    uri: 'mongodb://127.0.0.1:27017',
+    databaseName: 'online-shop',
+    collection: 'sessions'
+  });
 
- return store;
+  return store;
 }
 
-const createSessionConfig = () => {
+function createSessionConfig() {
   return {
     secret: 'super-secret',
     resave: false,

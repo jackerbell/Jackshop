@@ -1,22 +1,16 @@
-const isEmpty = (value) => {
-  return !value || value.trim() === ''; 
+function isEmpty(value) {
+  return !value || value.trim() === '';
 }
 
-const userCredentialAreValid = (email, password) => {
-  return email &&
-    email.includes('@') &&
-    password &&
-    password.length >= 6;
-}
-
-const userDetailsAreValid = (email, password, name, street, postal, city) => {
-  console.log(`at userDetalisAreValid email,password : ` + `${userCredentialAreValid(email, password)}`);
-  console.log(`at userDetalisAreValid name : ` + `${!isEmpty(name)} ` + `${name}`);
-  console.log(`at userDetalisAreValid street : ` + `${!isEmpty(street)} ` + `${street}`);
-  console.log(`at userDetalisAreValid postal : ` + `${!isEmpty(postal)} ` + `${postal}`);
-  console.log(`at userDetalisAreValid city : ` + `${!isEmpty(city)} ` + `${city}`);
+function userCredentialsAreValid(email, password) {
   return (
-    userCredentialAreValid(email, password) &&
+    email && email.includes('@') && password && password.trim().length >= 6
+  );
+}
+
+function userDetailsAreValid(email, password, name, street, postal, city) {
+  return (
+    userCredentialsAreValid(email, password) &&
     !isEmpty(name) &&
     !isEmpty(street) &&
     !isEmpty(postal) &&
@@ -30,5 +24,5 @@ function emailIsConfirmed(email, confirmEmail) {
 
 module.exports = {
   userDetailsAreValid: userDetailsAreValid,
-  emailIsConfirmed: emailIsConfirmed
+  emailIsConfirmed: emailIsConfirmed,
 };
