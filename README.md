@@ -25,6 +25,12 @@ DB: NoSQL(MongoDB) (MongoDB Atlas)
 * 회원가입
 * 관리자(물품등록, 삭제, 주문관리, 등록정보 수정)
 * 클라이언트(물품 보기, 장바구니  
+* 결제 기능(스트라이프 API)
+
+## 계정 정보
+* 운영자 : id : admin@admin.com / pw : admin1234
+* 사용자 : id : abc@test.com/ qw : test1234
+* 사용자의 경우 계정 생성을 통해 새로 등록하셔도 상관없습니다.
 
 ## 현황
 물품 리스트 CSS 보완 필요, 
