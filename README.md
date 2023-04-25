@@ -26,6 +26,7 @@ DB: NoSQL(MongoDB) (MongoDB Atlas)
 * 관리자(물품등록, 삭제, 주문관리, 등록정보 수정).. 세션 수명 주기: 2일 
 * 클라이언트(물품 보기, 장바구니)  
 * 결제 기능(스트라이프 API)
+* csrf 보안
 
 ## 계정 정보
 * 운영자 : id : admin@admin.com / pw : admin1234
